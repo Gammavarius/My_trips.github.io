@@ -1,0 +1,1911 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <title>All Trips</title>
+    </head>
+    <body>
+        <header class="page-header">
+            <h1>Поездки</h1>
+                <a class="to-account-page" href="#"><span>Заболоцкий К.О</span>
+                <img class="exit-img" src="img/exit.svg" width="11" height="9" alt="Выход">
+                </a>
+            
+        </header>
+        <main>
+            <div class="table-header">
+                <h2>Мои поездки</h2>
+                <button class="add-trip" type="button">
+                    <img src="img/plus.svg" height="10" width="10" alt="плюс">
+                    <span>Оформить поездку</span>
+                </button>
+            </div>
+                <div class="filters">
+                    <div class="calendar-container">
+                        <label for="trips-from-date" class="trips-from">Период с </label>
+                            <input id="trips-from-date" 
+                            type="date" 
+                            name="trips-start" 
+                            value="2024-02-22"
+                            class="custom-date-input"/>
+                            <button class="clear-date-value-btn" onclick="clearStartDate(this)"></button> 
+                            
+                            <img class="calendar-icon" src="img/calendar.svg" width="24" height="24" alt="календарь">
+                    </div>
+                    <div class="calendar-container-2">
+                        <label for="end-list-trips">по</label>
+                        <input placeholder="Выбрать..."
+                        class="textbox-n"
+                        type="text"
+                        id="end-list-trips"
+                        onfocus="(this.type='date')"
+                        onblur="(this.type='text')"/>
+                        <img class="calendar-icon-2" src="img/calendar.svg" width="24" height="24" alt="календарь">
+                    </div>
+                    <div class="search-container">
+                    <input type="text" class="search-input" placeholder="Поиск...">
+                    <img class="search-icon" src="img/search.svg" width="24" height="24" alt="поиск">
+                    </div>
+                    <button type="reset" class="reset-all">
+                        <img src="img/сloseblue.svg" width="9" height="9" alt="Сбросить">
+                        Сбросить всё</button>
+                    
+                    <div class="checkbox-archive-trips">
+                        <input id="checkbox-archive" type="checkbox" disabled> 
+                        <label for="checkbox-archive">Показать архивные поездки</label>
+                    </div>    
+                    
+                </div>
+            <div class="table">
+                <div class="horizontal-scroll"><div class="horizontal-scrollthumb"></div><div class="horizontal-scrolltrack"></div></div>
+                
+                    <table class="trips-table">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="tdHead">№ поездки</div>
+                                    <div class="tdData"><a href="#">000115</a></div>
+                                </td>
+                                <td>
+                                    <div class="tdHead">Дата поездки</div>
+                                    <div class="tdData">22.02.2024 - 27.02.2024</div>
+                                </td>
+                                <td>
+                                    <div class="tdHead">Сумма, план</div>
+                                    <div class="tdData">29 400,00</div>
+                                </td>
+                                <td>
+                                    <div class="tdHead">Сумма, факт</div>
+                                    <div class="tdData">29 400,00</div>
+                                </td>
+                                <td>
+                                    <div class="tdHead">Город</div>
+                                    <div class="tdData city">Москва, Ярославль, Ижевск, Владимир</div>
+                                </td>
+                                <td>
+                                    <div class="tdHead status">Статус</div>
+                                    <div class="tdData"><span class="documents">Документы</span></div>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <div class="tdHead">№ поездки</div>
+                                    <div class="tdData"><a href="#">000117</a></div>
+                                </td>
+                                <td>
+                                    <div class="tdHead">Дата поездки</div>
+                                    <div class="tdData">22.02.2024 - 27.02.2024</div>
+                                </td>
+                                <td>
+                                    <div class="tdHead">Сумма, план</div>
+                                    <div class="tdData">29 400,00</div>
+                                </td>
+                                <td>
+                                    <div class="tdHead">Сумма, факт</div>
+                                    <div class="tdData">29 400,00</div>
+                                </td>
+                                <td>
+                                    <div class="tdHead">Город</div>
+                                    <div class="tdData city">Москва</div>
+                                </td>
+                                <td>
+                                    <div class="tdHead status">Статус</div>
+                                    <div class="tdData"><span class="documents">Документы</span></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="tdHead">№ поездки</div>
+                                    <div class="tdData"><a href="#">000074</a></div>
+                                </td>
+                                <td>
+                                    <div class="tdHead">Дата поездки</div>
+                                    <div class="tdData">22.02.2024 - 27.02.2024</div>
+                                </td>
+                                <td>
+                                    <div class="tdHead">Сумма, план</div>
+                                    <div class="tdData">29 400,00</div>
+                                </td>
+                                <td>
+                                    <div class="tdHead">Сумма, факт</div>
+                                    <div class="tdData">29 400,00</div>
+                                </td>
+                                <td>
+                                    <div class="tdHead">Город</div>
+                                    <div class="tdData city"><span class="cities-scroll">Кременчуг-Константиновское, Петропавловск-Камчатский, Новосибирск, Волгоград</span>
+                                        <div class="info-tooltip"><span class="tooltiptext">Кременчуг-Константиновское, Петропавловск-Камчатский, Новосибирск, Волгоград, Саратов</span> <div class="tooltip-arrow"></div></div>
+                                        
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="tdHead status">Статус</div>
+                                    <div class="tdData"><span class="documents">Документы</span></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="tdHead">№ поездки</div>
+                                    <div class="tdData"><a href="#">000115</a></div>
+                                </td>
+                                <td>
+                                    <div class="tdHead">Дата поездки</div>
+                                    <div class="tdData">22.02.2024 - 27.02.2024</div>
+                                </td>
+                                <td>
+                                    <div class="tdHead">Сумма, план</div>
+                                    <div class="tdData">29 400,00</div>
+                                </td>
+                                <td>
+                                    <div class="tdHead">Сумма, факт</div>
+                                    <div class="tdData">29 400,00</div>
+                                </td>
+                                <td>
+                                    <div class="tdHead">Город</div>
+                                    <div class="tdData city">Москва, Ярославль, Ижевск, Владимир</div>
+                                </td>
+                                <td>
+                                    <div class="tdHead status">Статус</div>
+                                    <div class="tdData"><span class="documents">Документы</span></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="tdHead">№ поездки</div>
+                                    <div class="tdData"><a href="#">000211</a></div>
+                                </td>
+                                <td>
+                                    <div class="tdHead">Дата поездки</div>
+                                    <div class="tdData">22.02.2024 - 27.02.2024</div>
+                                </td>
+                                <td>
+                                    <div class="tdHead">Сумма, план</div>
+                                    <div class="tdData">29 400,00</div>
+                                </td>
+                                <td>
+                                    <div class="tdHead">Сумма, факт</div>
+                                    <div class="tdData">29 400,00</div>
+                                </td>
+                                <td>
+                                    <div class="tdHead">Город</div>
+                                    <div class="tdData city">Москва, Ярославль, Ижевск, Владимир</div>
+                                </td>
+                                <td>
+                                    <div class="tdHead status">Статус</div>
+                                    <div class="tdData"><span class="documents">Документы</span></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="tdHead">№ поездки</div>
+                                    <div class="tdData"><a href="#">000118</a></div>
+                                </td>
+                                <td>
+                                    <div class="tdHead">Дата поездки</div>
+                                    <div class="tdData">22.02.2024 - 27.02.2024</div>
+                                </td>
+                                <td>
+                                    <div class="tdHead">Сумма, план</div>
+                                    <div class="tdData">29 400,00</div>
+                                </td>
+                                <td>
+                                    <div class="tdHead">Сумма, факт</div>
+                                    <div class="tdData">29 400,00</div>
+                                </td>
+                                <td>
+                                    <div class="tdHead">Город</div>
+                                    <div class="tdData city">Москва, Ярославль, Ижевск, Владимир</div>
+                                </td>
+                                <td>
+                                    <div class="tdHead status">Статус</div>
+                                    <div class="tdData"><span class="documents">Документы</span></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="tdHead">№ поездки</div>
+                                    <div class="tdData"><a href="#">000119</a></div>
+                                </td>
+                                <td>
+                                    <div class="tdHead">Дата поездки</div>
+                                    <div class="tdData">22.02.2024 - 27.02.2024</div>
+                                </td>
+                                <td>
+                                    <div class="tdHead">Сумма, план</div>
+                                    <div class="tdData">29 400,00</div>
+                                </td>
+                                <td>
+                                    <div class="tdHead">Сумма, факт</div>
+                                    <div class="tdData">29 400,00</div>
+                                </td>
+                                <td>
+                                    <div class="tdHead">Город</div>
+                                    <div class="tdData city">Москва, Ярославль, Ижевск, Владимир</div>
+                                </td>
+                                <td>
+                                    <div class="tdHead status">Статус</div>
+                                    <div class="tdData"><span class="documents">Документы</span></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="tdHead">№ поездки</div>
+                                    <div class="tdData"><a href="#">000120</a></div>
+                                </td>
+                                <td>
+                                    <div class="tdHead">Дата поездки</div>
+                                    <div class="tdData">22.02.2024 - 27.02.2024</div>
+                                </td>
+                                <td>
+                                    <div class="tdHead">Сумма, план</div>
+                                    <div class="tdData">29 400,00</div>
+                                </td>
+                                <td>
+                                    <div class="tdHead">Сумма, факт</div>
+                                    <div class="tdData">29 400,00</div>
+                                </td>
+                                <td>
+                                    <div class="tdHead">Город</div>
+                                    <div class="tdData city">Москва, Ярославль, Ижевск, Владимир</div>
+                                </td>
+                                <td>
+                                    <div class="tdHead status">Статус</div>
+                                    <div class="tdData"><span class="documents">Документы</span></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="tdHead">№ поездки</div>
+                                    <div class="tdData"><a href="#">000133</a></div>
+                                </td>
+                                <td>
+                                    <div class="tdHead">Дата поездки</div>
+                                    <div class="tdData">22.02.2024 - 27.02.2024</div>
+                                </td>
+                                <td>
+                                    <div class="tdHead">Сумма, план</div>
+                                    <div class="tdData">29 400,00</div>
+                                </td>
+                                <td>
+                                    <div class="tdHead">Сумма, факт</div>
+                                    <div class="tdData">29 400,00</div>
+                                </td>
+                                <td>
+                                    <div class="tdHead">Город</div>
+                                    <div class="tdData city">Москва, Ярославль, Ижевск, Владимир</div>
+                                </td>
+                                <td>
+                                    <div class="tdHead status">Статус</div>
+                                    <div class="tdData"><span class="documents">Документы</span></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="tdHead">№ поездки</div>
+                                    <div class="tdData"><a href="#">000133</a></div>
+                                </td>
+                                <td>
+                                    <div class="tdHead">Дата поездки</div>
+                                    <div class="tdData">22.02.2024 - 27.02.2024</div>
+                                </td>
+                                <td>
+                                    <div class="tdHead">Сумма, план</div>
+                                    <div class="tdData">29 400,00</div>
+                                </td>
+                                <td>
+                                    <div class="tdHead">Сумма, факт</div>
+                                    <div class="tdData">29 400,00</div>
+                                </td>
+                                <td>
+                                    <div class="tdHead">Город</div>
+                                    <div class="tdData city">Москва, Ярославль, Ижевск, Владимир</div>
+                                </td>
+                                <td>
+                                    <div class="tdHead status">Статус</div>
+                                    <div class="tdData"><span class="documents">Документы</span></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="tdHead">№ поездки</div>
+                                    <div class="tdData"><a href="#">000133</a></div>
+                                </td>
+                                <td>
+                                    <div class="tdHead">Дата поездки</div>
+                                    <div class="tdData">22.02.2024 - 27.02.2024</div>
+                                </td>
+                                <td>
+                                    <div class="tdHead">Сумма, план</div>
+                                    <div class="tdData">29 400,00</div>
+                                </td>
+                                <td>
+                                    <div class="tdHead">Сумма, факт</div>
+                                    <div class="tdData">29 400,00</div>
+                                </td>
+                                <td>
+                                    <div class="tdHead">Город</div>
+                                    <div class="tdData city">Москва, Ярославль, Ижевск, Владимир</div>
+                                </td>
+                                <td>
+                                    <div class="tdHead status">Статус</div>
+                                    <div class="tdData"><span class="documents">Документы</span></div>
+                                </td>
+                            
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="tdHead">№ поездки</div>
+                                <div class="tdData"><a href="#">000133</a></div>
+                            </td>
+                            <td>
+                                <div class="tdHead">Дата поездки</div>
+                                <div class="tdData">22.02.2024 - 27.02.2024</div>
+                            </td>
+                            <td>
+                                <div class="tdHead">Сумма, план</div>
+                                <div class="tdData">29 400,00</div>
+                            </td>
+                            <td>
+                                <div class="tdHead">Сумма, факт</div>
+                                <div class="tdData">29 400,00</div>
+                            </td>
+                            <td>
+                                <div class="tdHead">Город</div>
+                                <div class="tdData city">Москва, Ярославль, Ижевск, Владимир</div>
+                            </td>
+                            <td>
+                                <div class="tdHead status">Статус</div>
+                                <div class="tdData"><span class="documents">Документы</span></div>
+                            </td>
+                        </tr>
+                    
+                    <tr>
+                        <td>
+                            <div class="tdHead">№ поездки</div>
+                            <div class="tdData"><a href="#">000133</a></div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Дата поездки</div>
+                            <div class="tdData">22.02.2024 - 27.02.2024</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, план</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, факт</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Город</div>
+                            <div class="tdData city">Москва, Ярославль, Ижевск, Владимир</div>
+                        </td>
+                        <td>
+                            <div class="tdHead status">Статус</div>
+                            <div class="tdData"><span class="documents">Документы</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="tdHead">№ поездки</div>
+                            <div class="tdData"><a href="#">000133</a></div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Дата поездки</div>
+                            <div class="tdData">22.02.2024 - 27.02.2024</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, план</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, факт</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Город</div>
+                            <div class="tdData city">Москва, Ярославль, Ижевск, Владимир</div>
+                        </td>
+                        <td>
+                            <div class="tdHead status">Статус</div>
+                            <div class="tdData"><span class="documents">Документы</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="tdHead">№ поездки</div>
+                            <div class="tdData"><a href="#">000133</a></div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Дата поездки</div>
+                            <div class="tdData">22.02.2024 - 27.02.2024</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, план</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, факт</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Город</div>
+                            <div class="tdData city">Москва, Ярославль, Ижевск, Владимир</div>
+                        </td>
+                        <td>
+                            <div class="tdHead status">Статус</div>
+                            <div class="tdData"><span class="documents">Документы</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="tdHead">№ поездки</div>
+                            <div class="tdData"><a href="#">000133</a></div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Дата поездки</div>
+                            <div class="tdData">22.02.2024 - 27.02.2024</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, план</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, факт</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Город</div>
+                            <div class="tdData city">Москва, Ярославль, Ижевск, Владимир</div>
+                        </td>
+                        <td>
+                            <div class="tdHead status">Статус</div>
+                            <div class="tdData"><span class="documents">Документы</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="tdHead">№ поездки</div>
+                            <div class="tdData"><a href="#">000133</a></div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Дата поездки</div>
+                            <div class="tdData">22.02.2024 - 27.02.2024</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, план</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, факт</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Город</div>
+                            <div class="tdData city">Москва, Ярославль, Ижевск, Владимир</div>
+                        </td>
+                        <td>
+                            <div class="tdHead status">Статус</div>
+                            <div class="tdData"><span class="documents">Документы</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="tdHead">№ поездки</div>
+                            <div class="tdData"><a href="#">000133</a></div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Дата поездки</div>
+                            <div class="tdData">22.02.2024 - 27.02.2024</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, план</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, факт</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Город</div>
+                            <div class="tdData city">Москва, Ярославль, Ижевск, Владимир</div>
+                        </td>
+                        <td>
+                            <div class="tdHead status">Статус</div>
+                            <div class="tdData"><span class="documents">Документы</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="tdHead">№ поездки</div>
+                            <div class="tdData"><a href="#">000133</a></div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Дата поездки</div>
+                            <div class="tdData">22.02.2024 - 27.02.2024</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, план</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, факт</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Город</div>
+                            <div class="tdData city">Москва, Ярославль, Ижевск, Владимир</div>
+                        </td>
+                        <td>
+                            <div class="tdHead status">Статус</div>
+                            <div class="tdData"><span class="documents">Документы</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="tdHead">№ поездки</div>
+                            <div class="tdData"><a href="#">000133</a></div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Дата поездки</div>
+                            <div class="tdData">22.02.2024 - 27.02.2024</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, план</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, факт</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Город</div>
+                            <div class="tdData city">Москва, Ярославль, Ижевск, Владимир</div>
+                        </td>
+                        <td>
+                            <div class="tdHead status">Статус</div>
+                            <div class="tdData"><span class="documents">Документы</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="tdHead">№ поездки</div>
+                            <div class="tdData"><a href="#">000133</a></div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Дата поездки</div>
+                            <div class="tdData">22.02.2024 - 27.02.2024</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, план</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, факт</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Город</div>
+                            <div class="tdData city">Москва, Ярославль, Ижевск, Владимир</div>
+                        </td>
+                        <td>
+                            <div class="tdHead status">Статус</div>
+                            <div class="tdData"><span class="documents">Документы</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="tdHead">№ поездки</div>
+                            <div class="tdData"><a href="#">000133</a></div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Дата поездки</div>
+                            <div class="tdData">22.02.2024 - 27.02.2024</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, план</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, факт</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Город</div>
+                            <div class="tdData city">Москва, Ярославль, Ижевск, Владимир</div>
+                        </td>
+                        <td>
+                            <div class="tdHead status">Статус</div>
+                            <div class="tdData"><span class="documents">Документы</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="tdHead">№ поездки</div>
+                            <div class="tdData"><a href="#">000133</a></div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Дата поездки</div>
+                            <div class="tdData">22.02.2024 - 27.02.2024</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, план</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, факт</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Город</div>
+                            <div class="tdData city">Москва, Ярославль, Ижевск, Владимир</div>
+                        </td>
+                        <td>
+                            <div class="tdHead status">Статус</div>
+                            <div class="tdData"><span class="documents">Документы</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="tdHead">№ поездки</div>
+                            <div class="tdData"><a href="#">000133</a></div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Дата поездки</div>
+                            <div class="tdData">22.02.2024 - 27.02.2024</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, план</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, факт</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Город</div>
+                            <div class="tdData city">Москва, Ярославль, Ижевск, Владимир</div>
+                        </td>
+                        <td>
+                            <div class="tdHead status">Статус</div>
+                            <div class="tdData"><span class="documents">Документы</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="tdHead">№ поездки</div>
+                            <div class="tdData"><a href="#">000133</a></div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Дата поездки</div>
+                            <div class="tdData">22.02.2024 - 27.02.2024</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, план</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, факт</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Город</div>
+                            <div class="tdData city">Москва, Ярославль, Ижевск, Владимир</div>
+                        </td>
+                        <td>
+                            <div class="tdHead status">Статус</div>
+                            <div class="tdData"><span class="documents">Документы</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="tdHead">№ поездки</div>
+                            <div class="tdData"><a href="#">000133</a></div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Дата поездки</div>
+                            <div class="tdData">22.02.2024 - 27.02.2024</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, план</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, факт</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Город</div>
+                            <div class="tdData city">Москва, Ярославль, Ижевск, Владимир</div>
+                        </td>
+                        <td>
+                            <div class="tdHead status">Статус</div>
+                            <div class="tdData"><span class="documents">Документы</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="tdHead">№ поездки</div>
+                            <div class="tdData"><a href="#">000133</a></div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Дата поездки</div>
+                            <div class="tdData">22.02.2024 - 27.02.2024</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, план</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, факт</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Город</div>
+                            <div class="tdData city">Москва, Ярославль, Ижевск, Владимир</div>
+                        </td>
+                        <td>
+                            <div class="tdHead status">Статус</div>
+                            <div class="tdData"><span class="documents">Документы</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="tdHead">№ поездки</div>
+                            <div class="tdData"><a href="#">000133</a></div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Дата поездки</div>
+                            <div class="tdData">22.02.2024 - 27.02.2024</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, план</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, факт</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Город</div>
+                            <div class="tdData city">Москва, Ярославль, Ижевск, Владимир</div>
+                        </td>
+                        <td>
+                            <div class="tdHead status">Статус</div>
+                            <div class="tdData"><span class="documents">Документы</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="tdHead">№ поездки</div>
+                            <div class="tdData"><a href="#">000133</a></div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Дата поездки</div>
+                            <div class="tdData">22.02.2024 - 27.02.2024</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, план</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, факт</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Город</div>
+                            <div class="tdData city">Москва, Ярославль, Ижевск, Владимир</div>
+                        </td>
+                        <td>
+                            <div class="tdHead status">Статус</div>
+                            <div class="tdData"><span class="documents">Документы</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="tdHead">№ поездки</div>
+                            <div class="tdData"><a href="#">000133</a></div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Дата поездки</div>
+                            <div class="tdData">22.02.2024 - 27.02.2024</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, план</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, факт</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Город</div>
+                            <div class="tdData city">Москва, Ярославль, Ижевск, Владимир</div>
+                        </td>
+                        <td>
+                            <div class="tdHead status">Статус</div>
+                            <div class="tdData"><span class="documents">Документы</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="tdHead">№ поездки</div>
+                            <div class="tdData"><a href="#">000133</a></div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Дата поездки</div>
+                            <div class="tdData">22.02.2024 - 27.02.2024</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, план</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, факт</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Город</div>
+                            <div class="tdData city">Москва, Ярославль, Ижевск, Владимир</div>
+                        </td>
+                        <td>
+                            <div class="tdHead status">Статус</div>
+                            <div class="tdData"><span class="documents">Документы</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="tdHead">№ поездки</div>
+                            <div class="tdData"><a href="#">000133</a></div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Дата поездки</div>
+                            <div class="tdData">22.02.2024 - 27.02.2024</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, план</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, факт</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Город</div>
+                            <div class="tdData city">Москва, Ярославль, Ижевск, Владимир</div>
+                        </td>
+                        <td>
+                            <div class="tdHead status">Статус</div>
+                            <div class="tdData"><span class="documents">Документы</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="tdHead">№ поездки</div>
+                            <div class="tdData"><a href="#">000133</a></div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Дата поездки</div>
+                            <div class="tdData">22.02.2024 - 27.02.2024</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, план</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, факт</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Город</div>
+                            <div class="tdData city">Москва, Ярославль, Ижевск, Владимир</div>
+                        </td>
+                        <td>
+                            <div class="tdHead status">Статус</div>
+                            <div class="tdData"><span class="documents">Документы</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="tdHead">№ поездки</div>
+                            <div class="tdData"><a href="#">000133</a></div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Дата поездки</div>
+                            <div class="tdData">22.02.2024 - 27.02.2024</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, план</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, факт</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Город</div>
+                            <div class="tdData city">Москва, Ярославль, Ижевск, Владимир</div>
+                        </td>
+                        <td>
+                            <div class="tdHead status">Статус</div>
+                            <div class="tdData"><span class="documents">Документы</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="tdHead">№ поездки</div>
+                            <div class="tdData"><a href="#">000133</a></div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Дата поездки</div>
+                            <div class="tdData">22.02.2024 - 27.02.2024</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, план</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, факт</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Город</div>
+                            <div class="tdData city">Москва, Ярославль, Ижевск, Владимир</div>
+                        </td>
+                        <td>
+                            <div class="tdHead status">Статус</div>
+                            <div class="tdData"><span class="documents">Документы</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="tdHead">№ поездки</div>
+                            <div class="tdData"><a href="#">000133</a></div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Дата поездки</div>
+                            <div class="tdData">22.02.2024 - 27.02.2024</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, план</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, факт</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Город</div>
+                            <div class="tdData city">Москва, Ярославль, Ижевск, Владимир</div>
+                        </td>
+                        <td>
+                            <div class="tdHead status">Статус</div>
+                            <div class="tdData"><span class="documents">Документы</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="tdHead">№ поездки</div>
+                            <div class="tdData"><a href="#">000133</a></div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Дата поездки</div>
+                            <div class="tdData">22.02.2024 - 27.02.2024</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, план</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, факт</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Город</div>
+                            <div class="tdData city">Москва, Ярославль, Ижевск, Владимир</div>
+                        </td>
+                        <td>
+                            <div class="tdHead status">Статус</div>
+                            <div class="tdData"><span class="documents">Документы</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="tdHead">№ поездки</div>
+                            <div class="tdData"><a href="#">000133</a></div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Дата поездки</div>
+                            <div class="tdData">22.02.2024 - 27.02.2024</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, план</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, факт</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Город</div>
+                            <div class="tdData city">Москва, Ярославль, Ижевск, Владимир</div>
+                        </td>
+                        <td>
+                            <div class="tdHead status">Статус</div>
+                            <div class="tdData"><span class="documents">Документы</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="tdHead">№ поездки</div>
+                            <div class="tdData"><a href="#">000133</a></div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Дата поездки</div>
+                            <div class="tdData">22.02.2024 - 27.02.2024</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, план</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, факт</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Город</div>
+                            <div class="tdData city">Москва, Ярославль, Ижевск, Владимир</div>
+                        </td>
+                        <td>
+                            <div class="tdHead status">Статус</div>
+                            <div class="tdData"><span class="documents">Документы</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="tdHead">№ поездки</div>
+                            <div class="tdData"><a href="#">000133</a></div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Дата поездки</div>
+                            <div class="tdData">22.02.2024 - 27.02.2024</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, план</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, факт</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Город</div>
+                            <div class="tdData city">Москва, Ярославль, Ижевск, Владимир</div>
+                        </td>
+                        <td>
+                            <div class="tdHead status">Статус</div>
+                            <div class="tdData"><span class="documents">Документы</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="tdHead">№ поездки</div>
+                            <div class="tdData"><a href="#">000133</a></div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Дата поездки</div>
+                            <div class="tdData">22.02.2024 - 27.02.2024</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, план</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, факт</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Город</div>
+                            <div class="tdData city">Москва, Ярославль, Ижевск, Владимир</div>
+                        </td>
+                        <td>
+                            <div class="tdHead status">Статус</div>
+                            <div class="tdData"><span class="documents">Документы</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="tdHead">№ поездки</div>
+                            <div class="tdData"><a href="#">000133</a></div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Дата поездки</div>
+                            <div class="tdData">22.02.2024 - 27.02.2024</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, план</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, факт</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Город</div>
+                            <div class="tdData city">Москва, Ярославль, Ижевск, Владимир</div>
+                        </td>
+                        <td>
+                            <div class="tdHead status">Статус</div>
+                            <div class="tdData"><span class="documents">Документы</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="tdHead">№ поездки</div>
+                            <div class="tdData"><a href="#">000133</a></div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Дата поездки</div>
+                            <div class="tdData">22.02.2024 - 27.02.2024</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, план</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, факт</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Город</div>
+                            <div class="tdData city">Москва, Ярославль, Ижевск, Владимир</div>
+                        </td>
+                        <td>
+                            <div class="tdHead status">Статус</div>
+                            <div class="tdData"><span class="documents">Документы</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="tdHead">№ поездки</div>
+                            <div class="tdData"><a href="#">000133</a></div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Дата поездки</div>
+                            <div class="tdData">22.02.2024 - 27.02.2024</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, план</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, факт</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Город</div>
+                            <div class="tdData city">Москва, Ярославль, Ижевск, Владимир</div>
+                        </td>
+                        <td>
+                            <div class="tdHead status">Статус</div>
+                            <div class="tdData"><span class="documents">Документы</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="tdHead">№ поездки</div>
+                            <div class="tdData"><a href="#">000133</a></div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Дата поездки</div>
+                            <div class="tdData">22.02.2024 - 27.02.2024</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, план</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, факт</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Город</div>
+                            <div class="tdData city">Москва, Ярославль, Ижевск, Владимир</div>
+                        </td>
+                        <td>
+                            <div class="tdHead status">Статус</div>
+                            <div class="tdData"><span class="documents">Документы</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="tdHead">№ поездки</div>
+                            <div class="tdData"><a href="#">000133</a></div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Дата поездки</div>
+                            <div class="tdData">22.02.2024 - 27.02.2024</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, план</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, факт</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Город</div>
+                            <div class="tdData city">Москва, Ярославль, Ижевск, Владимир</div>
+                        </td>
+                        <td>
+                            <div class="tdHead status">Статус</div>
+                            <div class="tdData"><span class="documents">Документы</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="tdHead">№ поездки</div>
+                            <div class="tdData"><a href="#">000133</a></div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Дата поездки</div>
+                            <div class="tdData">22.02.2024 - 27.02.2024</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, план</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, факт</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Город</div>
+                            <div class="tdData city">Москва, Ярославль, Ижевск, Владимир</div>
+                        </td>
+                        <td>
+                            <div class="tdHead status">Статус</div>
+                            <div class="tdData"><span class="documents">Документы</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="tdHead">№ поездки</div>
+                            <div class="tdData"><a href="#">000133</a></div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Дата поездки</div>
+                            <div class="tdData">22.02.2024 - 27.02.2024</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, план</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, факт</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Город</div>
+                            <div class="tdData city">Москва, Ярославль, Ижевск, Владимир</div>
+                        </td>
+                        <td>
+                            <div class="tdHead status">Статус</div>
+                            <div class="tdData"><span class="documents">Документы</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="tdHead">№ поездки</div>
+                            <div class="tdData"><a href="#">000133</a></div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Дата поездки</div>
+                            <div class="tdData">22.02.2024 - 27.02.2024</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, план</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, факт</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Город</div>
+                            <div class="tdData city">Москва, Ярославль, Ижевск, Владимир</div>
+                        </td>
+                        <td>
+                            <div class="tdHead status">Статус</div>
+                            <div class="tdData"><span class="documents">Документы</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="tdHead">№ поездки</div>
+                            <div class="tdData"><a href="#">000133</a></div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Дата поездки</div>
+                            <div class="tdData">22.02.2024 - 27.02.2024</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, план</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, факт</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Город</div>
+                            <div class="tdData city">Москва, Ярославль, Ижевск, Владимир</div>
+                        </td>
+                        <td>
+                            <div class="tdHead status">Статус</div>
+                            <div class="tdData"><span class="documents">Документы</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="tdHead">№ поездки</div>
+                            <div class="tdData"><a href="#">000133</a></div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Дата поездки</div>
+                            <div class="tdData">22.02.2024 - 27.02.2024</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, план</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, факт</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Город</div>
+                            <div class="tdData city">Москва, Ярославль, Ижевск, Владимир</div>
+                        </td>
+                        <td>
+                            <div class="tdHead status">Статус</div>
+                            <div class="tdData"><span class="documents">Документы</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="tdHead">№ поездки</div>
+                            <div class="tdData"><a href="#">000133</a></div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Дата поездки</div>
+                            <div class="tdData">22.02.2024 - 27.02.2024</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, план</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, факт</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Город</div>
+                            <div class="tdData city">Москва, Ярославль, Ижевск, Владимир</div>
+                        </td>
+                        <td>
+                            <div class="tdHead status">Статус</div>
+                            <div class="tdData"><span class="documents">Документы</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="tdHead">№ поездки</div>
+                            <div class="tdData"><a href="#">000133</a></div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Дата поездки</div>
+                            <div class="tdData">22.02.2024 - 27.02.2024</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, план</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, факт</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Город</div>
+                            <div class="tdData city">Москва, Ярославль, Ижевск, Владимир</div>
+                        </td>
+                        <td>
+                            <div class="tdHead status">Статус</div>
+                            <div class="tdData"><span class="documents">Документы</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="tdHead">№ поездки</div>
+                            <div class="tdData"><a href="#">000133</a></div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Дата поездки</div>
+                            <div class="tdData">22.02.2024 - 27.02.2024</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, план</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, факт</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Город</div>
+                            <div class="tdData city">Москва, Ярославль, Ижевск, Владимир</div>
+                        </td>
+                        <td>
+                            <div class="tdHead status">Статус</div>
+                            <div class="tdData"><span class="documents">Документы</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="tdHead">№ поездки</div>
+                            <div class="tdData"><a href="#">000133</a></div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Дата поездки</div>
+                            <div class="tdData">22.02.2024 - 27.02.2024</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, план</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, факт</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Город</div>
+                            <div class="tdData city">Москва, Ярославль, Ижевск, Владимир</div>
+                        </td>
+                        <td>
+                            <div class="tdHead status">Статус</div>
+                            <div class="tdData"><span class="documents">Документы</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="tdHead">№ поездки</div>
+                            <div class="tdData"><a href="#">000133</a></div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Дата поездки</div>
+                            <div class="tdData">22.02.2024 - 27.02.2024</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, план</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, факт</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Город</div>
+                            <div class="tdData city">Москва, Ярославль, Ижевск, Владимир</div>
+                        </td>
+                        <td>
+                            <div class="tdHead status">Статус</div>
+                            <div class="tdData"><span class="documents">Документы</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="tdHead">№ поездки</div>
+                            <div class="tdData"><a href="#">000133</a></div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Дата поездки</div>
+                            <div class="tdData">22.02.2024 - 27.02.2024</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, план</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, факт</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Город</div>
+                            <div class="tdData city">Москва, Ярославль, Ижевск, Владимир</div>
+                        </td>
+                        <td>
+                            <div class="tdHead status">Статус</div>
+                            <div class="tdData"><span class="documents">Документы</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="tdHead">№ поездки</div>
+                            <div class="tdData"><a href="#">000133</a></div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Дата поездки</div>
+                            <div class="tdData">22.02.2024 - 27.02.2024</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, план</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, факт</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Город</div>
+                            <div class="tdData city">Москва, Ярославль, Ижевск, Владимир</div>
+                        </td>
+                        <td>
+                            <div class="tdHead status">Статус</div>
+                            <div class="tdData"><span class="documents">Документы</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="tdHead">№ поездки</div>
+                            <div class="tdData"><a href="#">000133</a></div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Дата поездки</div>
+                            <div class="tdData">22.02.2024 - 27.02.2024</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, план</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, факт</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Город</div>
+                            <div class="tdData city">Москва, Ярославль, Ижевск, Владимир</div>
+                        </td>
+                        <td>
+                            <div class="tdHead status">Статус</div>
+                            <div class="tdData"><span class="documents">Документы</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="tdHead">№ поездки</div>
+                            <div class="tdData"><a href="#">000133</a></div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Дата поездки</div>
+                            <div class="tdData">22.02.2024 - 27.02.2024</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, план</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, факт</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Город</div>
+                            <div class="tdData city">Москва, Ярославль, Ижевск, Владимир</div>
+                        </td>
+                        <td>
+                            <div class="tdHead status">Статус</div>
+                            <div class="tdData"><span class="documents">Документы</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="tdHead">№ поездки</div>
+                            <div class="tdData"><a href="#">000133</a></div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Дата поездки</div>
+                            <div class="tdData">22.02.2024 - 27.02.2024</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, план</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, факт</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Город</div>
+                            <div class="tdData city">Москва, Ярославль, Ижевск, Владимир</div>
+                        </td>
+                        <td>
+                            <div class="tdHead status">Статус</div>
+                            <div class="tdData"><span class="documents">Документы</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="tdHead">№ поездки</div>
+                            <div class="tdData"><a href="#">000133</a></div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Дата поездки</div>
+                            <div class="tdData">22.02.2024 - 27.02.2024</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, план</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, факт</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Город</div>
+                            <div class="tdData city">Москва, Ярославль, Ижевск, Владимир</div>
+                        </td>
+                        <td>
+                            <div class="tdHead status">Статус</div>
+                            <div class="tdData"><span class="documents">Документы</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="tdHead">№ поездки</div>
+                            <div class="tdData"><a href="#">000133</a></div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Дата поездки</div>
+                            <div class="tdData">22.02.2024 - 27.02.2024</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, план</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, факт</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Город</div>
+                            <div class="tdData city">Москва, Ярославль, Ижевск, Владимир</div>
+                        </td>
+                        <td>
+                            <div class="tdHead status">Статус</div>
+                            <div class="tdData"><span class="documents">Документы</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="tdHead">№ поездки</div>
+                            <div class="tdData"><a href="#">000133</a></div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Дата поездки</div>
+                            <div class="tdData">22.02.2024 - 27.02.2024</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, план</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, факт</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Город</div>
+                            <div class="tdData city">Москва, Ярославль, Ижевск, Владимир</div>
+                        </td>
+                        <td>
+                            <div class="tdHead status">Статус</div>
+                            <div class="tdData"><span class="documents">Документы</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="tdHead">№ поездки</div>
+                            <div class="tdData"><a href="#">000133</a></div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Дата поездки</div>
+                            <div class="tdData">22.02.2024 - 27.02.2024</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, план</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, факт</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Город</div>
+                            <div class="tdData city">Москва, Ярославль, Ижевск, Владимир</div>
+                        </td>
+                        <td>
+                            <div class="tdHead status">Статус</div>
+                            <div class="tdData"><span class="documents">Документы</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="tdHead">№ поездки</div>
+                            <div class="tdData"><a href="#">000133</a></div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Дата поездки</div>
+                            <div class="tdData">22.02.2024 - 27.02.2024</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, план</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, факт</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Город</div>
+                            <div class="tdData city">Москва, Ярославль, Ижевск, Владимир</div>
+                        </td>
+                        <td>
+                            <div class="tdHead status">Статус</div>
+                            <div class="tdData"><span class="documents">Документы</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="tdHead">№ поездки</div>
+                            <div class="tdData"><a href="#">000133</a></div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Дата поездки</div>
+                            <div class="tdData">22.02.2024 - 27.02.2024</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, план</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, факт</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Город</div>
+                            <div class="tdData city">Москва, Ярославль, Ижевск, Владимир</div>
+                        </td>
+                        <td>
+                            <div class="tdHead status">Статус</div>
+                            <div class="tdData"><span class="documents">Документы</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="tdHead">№ поездки</div>
+                            <div class="tdData"><a href="#">000133</a></div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Дата поездки</div>
+                            <div class="tdData">22.02.2024 - 27.02.2024</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, план</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, факт</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Город</div>
+                            <div class="tdData city">Москва, Ярославль, Ижевск, Владимир</div>
+                        </td>
+                        <td>
+                            <div class="tdHead status">Статус</div>
+                            <div class="tdData"><span class="documents">Документы</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="tdHead">№ поездки</div>
+                            <div class="tdData"><a href="#">000133</a></div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Дата поездки</div>
+                            <div class="tdData">22.02.2024 - 27.02.2024</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, план</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, факт</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Город</div>
+                            <div class="tdData city">Москва, Ярославль, Ижевск, Владимир</div>
+                        </td>
+                        <td>
+                            <div class="tdHead status">Статус</div>
+                            <div class="tdData"><span class="documents">Документы</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="tdHead">№ поездки</div>
+                            <div class="tdData"><a href="#">000133</a></div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Дата поездки</div>
+                            <div class="tdData">22.02.2024 - 27.02.2024</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, план</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Сумма, факт</div>
+                            <div class="tdData">29 400,00</div>
+                        </td>
+                        <td>
+                            <div class="tdHead">Город</div>
+                            <div class="tdData city">Москва, Ярославль, Ижевск, Владимир</div>
+                        </td>
+                        <td>
+                            <div class="tdHead status">Статус</div>
+                            <div class="tdData"><span class="documents">Документы</span></div>
+                        </td>
+                    </tr>
+                        </tbody>
+                    </table>
+                
+                </div>
+            </main>
+            <script>
+                function clearStartDate(elem) {
+                    const parentElement = elem.closest('.calendar-container');
+                    const inp = parentElement.querySelector('input');
+                    inp.value = "";
+                }
+            </script>
+            </body>
+     
+   
+</html>
+
